@@ -54,7 +54,7 @@ fi
 
 if ! command -v solana &> /dev/null; then
     echo -e "${BLUE}[4/8] Menginstall Solana CLI...${NC}"
-    curl -sSfL https://solana-install.solana.workers.dev | bash -s - v1.17.21
+    curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash
     echo 'export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"' >> ~/.bashrc
     source ~/.bashrc
     solana --version
