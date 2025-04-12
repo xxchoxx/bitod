@@ -56,6 +56,7 @@ if ! command -v solana &> /dev/null; then
     echo -e "${BLUE}[4/8] Menginstall Solana CLI...${NC}"
     curl -sSfL https://solana-install.solana.workers.dev | bash -s - v1.17.21
     echo 'export PATH="/root/.local/share/solana/install/active_release/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
     solana --version
 else
     echo -e "${BLUE}[4/8] Solana CLI sudah terinstall${NC}"
